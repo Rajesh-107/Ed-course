@@ -7,7 +7,7 @@ import TotalUser from './TotalUser';
 
 const Home = () => {
     return (
-        <div>
+        <div className='px-16'>
            <Banner></Banner>
            <Services></Services>
            <TotalUser></TotalUser>

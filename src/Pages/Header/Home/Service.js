@@ -10,6 +10,7 @@ const Service = ({ service }) => {
         <h2 className="card-title">{service.name}</h2>
         <p>{service.description}</p>
         <p className="text-xl font-bold">Price: ${service.price}</p>
+        <button type="submit" className="btn btn-outline">Buy Now</button>
       </div>
     </div>
   );

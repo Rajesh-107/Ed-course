@@ -8,6 +8,7 @@ import Navbar from './Pages/Header/Navbar';
 import Footer from './Pages/Header/Footer';
 import RequireAuth from './Pages/Login/RequireAuth';
 import CourseService from './Pages/Header/Home/CourseService';
+import NotFound from './Pages/Header/Home/NotFound';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path='/service' element={<RequireAuth>
             <CourseService></CourseService>
           </RequireAuth>}></Route>
-
+            <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
