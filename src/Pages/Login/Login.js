@@ -8,6 +8,12 @@ import { toast } from 'react-toastify';
 import SocialLogin from './SocialLogin';
 
 const Login = () => {
+  const location = useLocation(); 
+  let from = location.state?.from?.pathname || '/'
+  const emailRef = useRef('');
+  const passwordRef = useRef('');
+  const navigate = useNavigate()
+
 	let errorElement;
     const [
         signInWithEmailAndPassword,
@@ -17,26 +23,17 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
 	  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-    const location = useLocation(); 
-    let from = location.state?.from?.pathname || '/'
-    const emailRef = useRef('');
-    const passwordRef = useRef('');
-    const navigate = useNavigate()
+    
 
 	if(user){
-        // navigate(from, {replace: true});
+        navigate(from, {replace: true});
     }
-    const handleSubmit = async e =>{
+    const handleSubmit =  e =>{
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-       await signInWithEmailAndPassword(email, password);
-	//    const {data} = await axios.post('https://morning-hamlet-62684.herokuapp.com/login', {email});
-	//    localStorage.setItem('accessToken', data.accessToken);
-	//    navigate(from, {replace: true});
-	//    localStorage.setItem('accessToken', data.accessToken);
-	//    navigate(from, {replace: true});
+        signInWithEmailAndPassword(email, password);
     }
 	
 
@@ -73,7 +70,7 @@ const Login = () => {
               <img
                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
                 class="w-full"
-                alt="Phone image"
+                alt="Phoneimage"
               />
             </div>
             <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
@@ -111,11 +108,13 @@ const Login = () => {
                       >Remember me</label
                     >
                   </div>
-                  <a
+                  <button
+                  onClick={resetPassword}
                     href="#!"
                     class="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
-                    >Forgot password?</a
-                  >
+                    >Forgot password?
+                    </button>
+                  
                 </div>
       
                
@@ -148,7 +147,3 @@ const Login = () => {
 
 export default Login;
 
-{/* <div className="row mt-3">
-<p>Don't have an account? <Link to='/register' onClick={navigateRegister} className='text-decoration-none pe-auto text-danger'>Register Here</Link></p>
-<p>Forget Password? <button onClick={resetPassword} className='btn btn-link text-decoration-none pe-auto text-primary'>Reset Password</button></p>
-</div> */}

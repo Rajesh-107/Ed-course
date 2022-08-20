@@ -14,12 +14,14 @@ function App() {
     <div>
       <Navbar></Navbar>
       <Routes>
-          <Route path='/' element={<RequireAuth>
+          <Route path='/' element={
             <Home></Home>
-          </RequireAuth>}></Route>
+          }></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/register' element={<Signup></Signup>}></Route>
-          <Route path='/service' element={<CourseService></CourseService>}></Route>
+          <Route path='/service' element={<RequireAuth>
+            <CourseService></CourseService>
+          </RequireAuth>}></Route>
 
       </Routes>
       <Footer></Footer>
