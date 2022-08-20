@@ -1,0 +1,44 @@
+ [
+    {
+        "_id": 1,
+        "name": "React Course",
+        "description":"React - The complete guide (incl Hooks, React, Router, Redux) This course takes a hands-on approach to create applications and deploy them. This allows students to learn real problems and design projects to deal with them. The course covers topics such as: Learning to build powerful reactive web apps.",
+       "img":"https://i.ibb.co/jyxzdJP/react.png",
+        "price": 13
+    },
+    {
+        "_id": 2,
+        "name": "Redux Course",
+        "description":"Redux is the most commonly used state-management library with React. Redux lets you use plain JavaScript syntax, but enforces consistent patterns that make your apps reliable and predictable.",
+       "img":"https://i.ibb.co/4V8P3Zc/redux.png",
+        "price": 13
+    },
+    {
+        "_id": 3,
+        "name": "Node js and React",
+        "description":"Node. js enables the creation of scalable and quick back-end RESTful APIs. On the other hand, React is a front-end library that creates interactive user interfaces.",
+       "img":"https://i.ibb.co/9qXcP1v/python-img.jpg",
+        "price": 13
+    },
+    {
+        "_id": 4,
+        "name": "Mern Stack",
+        "description":"The course is divided into four sections, each targeting a specific technology(s). It has an excellent rating of 4.7. Not only it covers React, MongoDB, Node, and Express for web development, it also has a course for creating cross-platform mobile applications using React Native. Knowledge of HTML, CSS, and JavaScript.",
+       "img":"https://i.ibb.co/7bZsWZM/nodeexpress.png",
+        "price": 13
+    },
+    {
+        "_id": 5,
+        "name": "Java Spring",
+        "description":"A Java Springboot developer develops web applications and microservices with Spring Framework. A Java backend developer uses Spring Framework to create the server-side code of web applications.",
+       "img":"https://i.ibb.co/2WzYfMT/mern.jpg",
+        "price": 13
+    },
+    {
+        "_id": 6,
+        "name": "Learn Python",
+        "description":"Python is a popular general-purpose programming language. It is used in machine learning, web development, desktop applications, and many other fields. Fortunately for beginners, Python has a simple, easy-to-use syntax.",
+       "img":"https://i.ibb.co/fDtWHnB/java.jpg",
+        "price": 13
+    }
+]
