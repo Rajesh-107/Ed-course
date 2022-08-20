@@ -2,7 +2,7 @@ import React from 'react';
 
 const TotalUser = () => {
     return (
-       <div className='px-20'>
+       <div className='py-6'>
         <ol class="border-l-2 border-blue-600">
   <li>
     <div class="flex flex-start items-center">

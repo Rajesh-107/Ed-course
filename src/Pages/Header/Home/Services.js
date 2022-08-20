@@ -11,7 +11,7 @@ const Services = () => {
     } ,[])
 
     return (
-        <div className='my-28'>
+        <div className='py-6'>
             <div className='text-center'>
                 <h3 className='text-primary text-xl font-bold uppercase'>Our Coursers</h3>
                 <h2 className='text-4xl'>Course We Provided</h2>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Service = ({ service }) => {
   return (
@@ -10,7 +11,7 @@ const Service = ({ service }) => {
         <h2 className="card-title">{service.name}</h2>
         <p>{service.description}</p>
         <p className="text-xl font-bold">Price: ${service.price}</p>
-        <button type="submit" className="btn btn-outline">Buy Now</button>
+        <Link to='/service' type="submit" className="btn btn-outline">Buy Now</Link>
       </div>
     </div>
   );
